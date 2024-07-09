@@ -149,6 +149,8 @@
 
     <script>
         function downloadVCard() {
+
+            const avatarUrl = 'img.jpg';
             const vCardData = `
 BEGIN:VCARD
 VERSION:3.0
@@ -158,6 +160,7 @@ TITLE:Contractor
 TEL;TYPE=CELL:01680974455
 TEL;TYPE=CELL:01916167603
 EMAIL:jahedmir.andsons@gmail.com
+PHOTO;TYPE=JPEG;ENCODING=b;VALUE=URI:${avatarUrl}
 END:VCARD`;
 
             const blob = new Blob([vCardData], { type: 'text/vcard' });
