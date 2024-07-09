@@ -117,13 +117,22 @@
 
         <div class="section-title"><i class="icon fas fa-phone"></i> Contact</div>
         <div class="contact-info">
-            <p><i class="icon fas fa-mobile-alt"></i> Mobile: <a href="tel:01680974455">01680974455</a></p>
-            <p><i class="icon fas fa-envelope"></i> Email: <a href="mailto:jahedmir.andsons@gmail.com">jahedmir.andsons@gmail.com</a></p>
+            <div class="mobile flex">
+                <p><i class="icon fas fa-mobile-alt"></i> Mobile:
+                <ul class="px-2">
+                    <li><a href="tel:01680974455">01680974455</a></li>
+                    <li><a href="tel:01916167603">01916167603</a></li>
+                </ul>
+                </p>
+            </div>
+
+            <p><i class="icon fas fa-envelope"></i> Email: <a class="px-2"
+                    href="mailto:jahedmir.andsons@gmail.com">jahedmir.andsons@gmail.com</a></p>
         </div>
 
         <div class="divider"></div>
 
-        <div class="section-title"><i class="icon fas fa-building"></i> Contractor:</div>
+        <div class="section-title"><i class="icon fas fa-building"></i> Contractor</div>
         <div class="company-info">
             <ul class="list-disc pl-4">
                 <li class="list-item">Education Engineering Department (EED)</li>
@@ -133,7 +142,8 @@
         </div>
 
         <div class="text-center">
-            <button class="btn-download" onclick="downloadVCard()"><i class="icon fas fa-download"></i> DOWNLOAD VCARD</button>
+            <button class="btn-download" onclick="downloadVCard()"><i class="icon fas fa-download"></i> DOWNLOAD
+                VCARD</button>
         </div>
     </div>
 
@@ -146,6 +156,7 @@ FN:Syed Touhedul Alam
 ORG:M/S JAHED MIR AND SONS
 TITLE:Contractor
 TEL;TYPE=CELL:01680974455
+TEL;TYPE=CELL:01916167603
 EMAIL:jahedmir.andsons@gmail.com
 END:VCARD`;
 
