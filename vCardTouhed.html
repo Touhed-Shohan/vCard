@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Touhedul Alam - Contractor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #000000, #002fff);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 2px solid #1e90ff;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333333;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .list-item {
+            margin-bottom: 5px;
+            color: #666666;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #1e90ff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background-color: #007bff;
+        }
+
+        .icon {
+            margin-right: 10px;
+            color: #1e90ff;
+        }
+
+        .contact-info p,
+        .company-info p {
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        .contact-info a,
+        .company-info a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover,
+        .company-info a:hover {
+            color: #007bff;
+        }
+
+        .divider {
+            border-top: 1px solid #e2e8f0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="img.jpg" alt="Avatar" class="avatar">
+        <h2 class="card-title">Syed Touhedul Alam</h2>
+        <p class="text-lg text-gray-600 text-center mb-4">First Class Contractor</p>
+
+        <div class="section-title"><i class="icon fas fa-briefcase"></i> Proprietor:</div>
+        <p class="text-gray-600">M/S JAHED MIR AND SONS</p>
+        <p class="text-xs text-gray-600">Kurpar, Netrokona-2400</p>
+
+        <div class="divider"></div>
+
+        <div class="section-title"><i class="icon fas fa-phone"></i> Contact</div>
+        <div class="contact-info">
+            <p><i class="icon fas fa-mobile-alt"></i> Mobile: <a href="tel:01680974455">01680974455</a></p>
+            <p><i class="icon fas fa-envelope"></i> Email: <a href="mailto:jahedmir.andsons@gmail.com">jahedmir.andsons@gmail.com</a></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-title"><i class="icon fas fa-building"></i> About Company</div>
+        <div class="company-info">
+            <ul class="list-disc pl-4">
+                <li class="list-item">Education Engineering Department (EED)</li>
+                <li class="list-item">Roads and Highways Department (RHD)</li>
+                <li class="list-item">Local Government Engineering Department (LGED)</li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <button class="btn-download" onclick="downloadVCard()"><i class="icon fas fa-download"></i> DOWNLOAD VCARD</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Syed Touhedul Alam
+ORG:M/S JAHED MIR AND SONS
+TITLE:Contractor
+TEL;TYPE=CELL:01680974455
+EMAIL:jahedmir.andsons@gmail.com
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'touhedul_alam.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+
+</html>
